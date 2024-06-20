@@ -1,0 +1,50 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem;
+
+    background-color: #9545fa;
+    color: #ddd;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ul li {
+    margin: 0 1rem;
+    list-style: none
+}
+
+.nav__item {
+    text-decoration: none; 
+    color: #eee;
+}
+
+.btn {
+
+    padding: .8rem;
+    margin: 0 1rem;
+
+    border: none;
+    border-radius: 15px;
+
+    font-size: 1rem;
+    font-weight: 900;
+
+}
+
+.btn__registro {
+    background-color: #eee;
+    color: #9545fa;
+
+}
+
+.btn__login {
+    background-color: #faacfa;
+    color: #9545fa;
+}

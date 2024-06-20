@@ -1,0 +1,18 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 2rem;
+
+    border-radius: 25px;
+    box-shadow: 1px 1px 15px #454545;
+}
+
+.card__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    margin: 1.5rem;
+}
+
