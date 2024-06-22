@@ -1,7 +1,13 @@
+import { useContext } from 'react';
 import './BookCard.css'
+import CartContext from '../../context/cartContext/CartContext';
 
 
 export const BookCard = ({book}) => {
+
+    const cartCtx = useContext(CartContext)
+    const { addToCart } = cartCtx
+
     return (
       <div className="book-card">
         <div className="book-card__header">
@@ -15,7 +21,7 @@ export const BookCard = ({book}) => {
                 <p>
                     <span className="book-card__item">Editora: </span> {book.editorial}
                 </p>
-                <div>
+                
                     <p>
                         <span className="book-card__item">Genero: </span> {book.genero}
                     </p>
@@ -23,7 +29,7 @@ export const BookCard = ({book}) => {
                         <span className="book-card__item">Páginas: </span>
                         {book.paginas}
                     </p>
-                </div>
+                
                 <p>
                     <span className="book-card__item">Precio: </span>
                     <span className="book-card__price">$ {book.precio}</span>
@@ -32,7 +38,7 @@ export const BookCard = ({book}) => {
             </div>
 
           <div className='book-card__body__button'>
-            <button>Agregar al Carrito</button>
+            <button onClick={() => addToCart(book)}>Agregar al Carrito</button>
           </div>
         </div>
       </div>

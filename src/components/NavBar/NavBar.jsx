@@ -34,6 +34,11 @@ export const NavBar = () => {
             Libros
           </Link>
         </li>
+        <li>
+          <Link className="nav__item" to="/payment">
+            Carrito
+          </Link>
+        </li>
       </ul>
       {authStatus ? (
         <>
