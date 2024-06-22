@@ -1,0 +1,16 @@
+.book-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    width: 75%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+
+    margin: 5rem 0;
+}

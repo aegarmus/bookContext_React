@@ -16,11 +16,12 @@ export const BookState = ({children}) => {
     const getBooks = async() => {
         try {
             const { data }  = await axiosClient.get('/books')
-
             dispatch({
                 type: 'OBTENER_LIBROS',
                 payload: data.data
             })
+            
+            return data.data
         } catch (error) {
             throw new Error(error)
         }

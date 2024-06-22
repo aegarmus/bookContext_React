@@ -1,6 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import BookContext from "../../context/bookContext/BookContext";
+
 import { BookCard } from "../../components/BookCard/BookCard";
+import { NavBar } from "../../components/NavBar/NavBar";
+
+import './BookPage.css'
 
 export const BooksPage = () => {
   const bookCtx = useContext(BookContext);
@@ -20,12 +24,19 @@ export const BooksPage = () => {
 
   return (
     <>
+        <NavBar />
         <h1>Books Page</h1>
-        {
-            books.map( book => {
+
+        <div className="book-container">
+          {
+              books.map( book => (
                 <BookCard book={book} key={book._id} />
-            })
-        }
+
+              )
+              )
+          }
+
+        </div>
     </>
   )
 };
